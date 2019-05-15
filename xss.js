@@ -1,3 +1,8 @@
-// function a(){setTimeout(()=>{console.log('xss');document.body.style.opacity=0;a()},100)};a()
+document.body.style.opacity=0;
+let txt = 'a';
+while(1){
+    txt = txt += 'a';
+    console.log('xss');
+}
 // protect against xss, kiddo =)))
 // https://youtu.be/bNVgQBHHl4I 
